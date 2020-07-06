@@ -1,0 +1,7 @@
+configuration {
+    modi: "drun,ssh,window";
+    font: "FiraCode Nerd Font Mono 12";
+    show-icons: true;
+    terminal: "termite";
+    theme: "~/.config/rofi/themes/slate.rasi";
+}
