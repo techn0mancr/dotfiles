@@ -2,9 +2,8 @@
 
 count=0
 disconnected=""
-disconnected1="Nah!"
 wireless_connected=""
-ethernet_connected=""
+ethernet_connected=""
 
 SSID_NAME=$(iwgetid -r)
 ID="$(ip link | awk '/state UP/ {print $2}')"
@@ -17,6 +16,6 @@ while true; do
             echo "$wireless_connected"; sleep 5
         fi
     else
-        echo "$disconnected" "$disconnected1"; sleep 0.5
+        echo "$disconnected"; sleep 0.5
     fi
 done
