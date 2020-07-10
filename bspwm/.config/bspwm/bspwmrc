@@ -4,7 +4,7 @@
 sxhkd &
 
 # Launch background setter
-nitrogen --set-scaled $HOME/backgrounds/geometric-black-red.jpg &
+nitrogen --restore &
 
 # Launch compositor
 picom &
@@ -12,8 +12,19 @@ picom &
 # Launch status bar
 $HOME/.config/polybar/launch.sh &
 
-# Add multiple monitors and workspaces
-bspc monitor -d tty code mail chat web
+# Lauch file manager daemon
+spacefm --daemon-mode &
+
+# Add default monitor and its workspaces
+bspc monitor eDP-1 --reset-desktops tty1 code1 chat1 mail1 web1
+
+# Add additional monitor an its workspaces if connected
+if xrandr --query | grep "HDMI-2 connected"; then
+    bspc monitor HDMI-2 --reset-desktops tty2 code2 chat2 mail2 web2
+    bspc wm --reorder-monitors eDP-1 HDMI-2
+else
+    bspc monitor HDMI-2 --remove
+fi
 
 bspc config border_width         2
 bspc config window_gap          10
@@ -23,8 +34,8 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 # Set window rules
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+bspc rule --add Gimp desktop='^8' state=floating follow=on
+bspc rule --add Chromium desktop='^2'
+bspc rule --add mplayer2 state=floating
+bspc rule --add Kupfer.py focus=on
+bspc rule --add Screenkey manage=off

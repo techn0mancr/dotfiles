@@ -1,4 +1,4 @@
 # Start desired wm on login
 if [[ "$(tty)" = "/dev/tty1" ]]; then
-   pgrep bspwm || startx
+   exec startx
 fi
