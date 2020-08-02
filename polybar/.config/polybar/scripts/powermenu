@@ -4,8 +4,8 @@
 
 MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 3 -xoffset -10 -yoffset 32 -width 10 -hide-scrollbar -line-padding 4 -padding 20 -lines 4 <<< " Sleep| Logout| Reboot| Shutdown")"
             case "$MENU" in
-                *Sleep) systemctl -i suspend ;;
+                *Sleep) systemctl --ignore-inhibitors suspend ;;
                 *Logout) killall bspwm;;
                 *Reboot) systemctl reboot ;;
-                *Shutdown) systemctl -i poweroff
+                *Shutdown) systemctl --ignore-inhibitors poweroff
             esac

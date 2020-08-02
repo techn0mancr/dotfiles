@@ -4,7 +4,7 @@
 
 " Initial setup to avoid interfering with plugins
 syntax on
-set encoding=utf8
+set encoding=UTF-8
 set noshowmode
 
 """" START Vim-plug configuration
@@ -12,22 +12,24 @@ set noshowmode
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Utility
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'junegunn/fzf'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
 
 " Generic programming support
-Plug 'townk/vim-autoclose'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/syntastic'
+Plug 'townk/vim-autoclose'
 
 " Theme/interface
 Plug 'tomasr/molokai'
-Plug 'ryanoasis/vim-devicons' "
+Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'edkolev/tmuxline.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 """" END Vim-plug configuration
@@ -54,13 +56,19 @@ set ttimeoutlen=10
 " Highlight characters that go over the 80-character length
 set colorcolumn=80
 
+" required by NERD Commenter
+filetype plugin on
+
 """""""""""""""""""
 " Theme and styling
 """""""""""""""""""
-"set termguicolors " Enable true colors (breaks color if not supported)
+" Enable true colors (breaks color if not supported)
+set termguicolors
 set background=dark
+
+" Enable Molokai's 256-bit color mode
 colorscheme molokai
-let g:rehash256 = 1 "Enable Molokai's 256-bit color mode
+let g:rehash256 = 1 
 
 """" Vim-Airline configuration
 " Themes and fonts
@@ -78,6 +86,31 @@ let g:airline#extensions#whitespace#mixed_indent_algo = 2
 " Key mapping configurations
 """"""""""""""""""""""""""""
 let mapleader = ","
+
+" use <C-n> for toggling NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+" use <C-p> for toggling Ctrl-P
 let g:ctrlp_map = '<C-p>'
-nnoremap <esc> :noh<return><esc>
+
+" use <Esc> to remove highlights
+nnoremap <Esc> :noh<return><Esc>
+
+" use <Tab> to trigger and confirm completion
+function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+    \ pumvisible() ? coc#_select_confirm() :
+    \ <SID>check_back_space() ? "\<Tab>" :
+    \ coc#refresh()
+
+"" use vim keybindings to navigate completion list
+"inoremap <expr> j
+    "\ pumvisible() ? "\<C-n>" :
+    "\ 'j'
+"inoremap <expr> k
+    "\ pumvisible() ? "\<C-p>" :
+    "\ 'k'

@@ -3,7 +3,17 @@
 BAR_ICON=""
 NOTIFY_ICON=/usr/share/icons/Papirus/32x32/apps/system-software-update.svg
 
-get_total_updates() { UPDATES=$(checkupdates 2>/dev/null | wc -l); }
+get_total_updates() {
+    if ! UPDATES_arch=$(checkupdates 2> /dev/null | wc -l ); then
+        UPDATES_arch=0
+    fi
+    
+    if ! UPDATES_aur=$(yay -Qum 2> /dev/null | wc -l); then
+        UPDATES_aur=0
+    fi
+
+    UPDATES=$(("$UPDATES_arch" + "$UPDATES_aur"))
+}
 
 while true; do
     get_total_updates

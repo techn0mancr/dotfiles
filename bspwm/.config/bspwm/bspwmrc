@@ -18,12 +18,13 @@ spacefm --daemon-mode &
 # Add default monitor and its workspaces
 bspc monitor eDP-1 --reset-desktops tty1 code1 chat1 mail1 web1
 
-# Add additional monitor an its workspaces if connected
+# Add additional monitor and its workspaces if connected
 if xrandr --query | grep "HDMI-2 connected"; then
     bspc monitor HDMI-2 --reset-desktops tty2 code2 chat2 mail2 web2
     bspc wm --reorder-monitors eDP-1 HDMI-2
 else
     bspc monitor HDMI-2 --remove
+    bspc wm --adopt-orphans
 fi
 
 bspc config border_width         2
@@ -34,8 +35,9 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 # Set window rules
-bspc rule --add Gimp desktop='^8' state=floating follow=on
-bspc rule --add Chromium desktop='^2'
-bspc rule --add mplayer2 state=floating
-bspc rule --add Kupfer.py focus=on
-bspc rule --add Screenkey manage=off
+bspc rule --add Chromium desktop='^5' follow=on
+bspc rule --add discord desktop='^3' follow=on
+bspc rule --add firefox desktop='^5' follow=on
+bspc rule --add Mailspring desktop='^4' follow=on
+bspc rule --add Station desktop='^3' follow=on
+bspc rule --add Zathura state=tiled
