@@ -1,3 +1,13 @@
+#              __             
+#  ____  _____/ /_  __________
+# /_  / / ___/ __ \/ ___/ ___/
+#  / /_(__  ) / / / /  / /__  
+# /___/____/_/ /_/_/   \___/  
+#
+# zsh initialization script
+#
+# Written by Nathanael Putro
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 

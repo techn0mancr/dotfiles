@@ -1,3 +1,13 @@
+#              __                   
+#  ____  _____/ /_  ___  ____ _   __
+# /_  / / ___/ __ \/ _ \/ __ \ | / /
+#  / /_(__  ) / / /  __/ / / / |/ / 
+# /___/____/_/ /_/\___/_/ /_/|___/  
+#
+# zsh environment variables
+#
+# Written by Nathanael Putro
+
 export BROWSER="firefox"
 export COLORTERM="truecolor"
 export EDITOR="nvim"

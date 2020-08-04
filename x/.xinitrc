@@ -1,5 +1,15 @@
 #!/bin/sh
 
+#          _       _ __           
+#    _  __(_)___  (_) /___________
+#   | |/_/ / __ \/ / __/ ___/ ___/
+#  _>  </ / / / / / /_/ /  / /__  
+# /_/|_/_/_/ /_/_/\__/_/   \___/  
+#
+# X server initialization script
+#
+# Written by Nathanael Putro
+
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources

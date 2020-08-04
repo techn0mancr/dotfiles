@@ -1,6 +1,12 @@
-""""""""""""""""""""""""""""""""""""""""""
-" Nathanael H. Putro Neo/vim configuration
-""""""""""""""""""""""""""""""""""""""""""
+"                           _         
+"    ____  ___  ____ _   __(_)___ ___ 
+"   / __ \/ _ \/ __ \ | / / / __ `__ \
+"  / / / /  __/ /_/ / |/ / / / / / / /
+" /_/ /_/\___/\____/|___/_/_/ /_/ /_/ 
+"
+" neovim configuration file
+"
+" Written by Nathanael Hananto Putro
 
 " Initial setup to avoid interfering with plugins
 syntax on

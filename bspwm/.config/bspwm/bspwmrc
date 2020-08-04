@@ -1,5 +1,16 @@
 #!/bin/sh
 
+#     __                               
+#    / /_  _________ _      ______ ___ 
+#   / __ \/ ___/ __ \ | /| / / __ `__ \
+#  / /_/ (__  ) /_/ / |/ |/ / / / / / /
+# /_.___/____/ .___/|__/|__/_/ /_/ /_/ 
+#          /_/                        
+#
+# bspwm configuration file
+#
+# Written by Nathanael Putro
+
 # Launch hotkey daemon
 sxhkd &
 
@@ -27,7 +38,8 @@ else
     bspc wm --adopt-orphans
 fi
 
-bspc config border_width         2
+# Appearance
+bspc config border_width         3
 bspc config window_gap          10
 
 bspc config split_ratio          0.52
@@ -41,3 +53,4 @@ bspc rule --add firefox desktop='^5' follow=on
 bspc rule --add Mailspring desktop='^4' follow=on
 bspc rule --add Station desktop='^3' follow=on
 bspc rule --add Zathura state=tiled
+bspc rule --add zoom desktop='^3' follow=on
