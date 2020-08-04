@@ -1,4 +1,15 @@
-#!/usr/bin/bash
+#!/bin/bash
+
+#         __              __                    __                      __  
+#   _____/ /_  ___  _____/ /__      ____  ___  / /__      ______  _____/ /__
+#  / ___/ __ \/ _ \/ ___/ //_/_____/ __ \/ _ \/ __/ | /| / / __ \/ ___/ //_/
+# / /__/ / / /  __/ /__/ ,< /_____/ / / /  __/ /_ | |/ |/ / /_/ / /  / ,<   
+# \___/_/ /_/\___/\___/_/|_|     /_/ /_/\___/\__/ |__/|__/\____/_/  /_/|_|  
+#
+# Check network status
+#
+# Written by Nathanael Putro
+# Adapted from Aditya Shakya's check-network script (https://github.com/adi1090x/polybar-themes/blob/master/polybar-5/scripts/check-network)
 
 count=0
 disconnected=""
