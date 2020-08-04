@@ -1,6 +1,13 @@
 #!/bin/bash
 
-## Created By Aditya Shakya
+#     ____  ____ _      _____  _________ ___  ___  ____  __  __
+#    / __ \/ __ \ | /| / / _ \/ ___/ __ `__ \/ _ \/ __ \/ / / /
+#   / /_/ / /_/ / |/ |/ /  __/ /  / / / / / /  __/ / / / /_/ / 
+#  / .___/\____/|__/|__/\___/_/  /_/ /_/ /_/\___/_/ /_/\__,_/  
+# /_/
+#
+# Written by Nathanael Putro
+# Adapted from Aditya Shakya's powermenu script (https://github.com/adi1090x/polybar-themes/blob/master/polybar-5/scripts/powermenu)
 
 MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 3 -xoffset -10 -yoffset 32 -width 10 -hide-scrollbar -line-padding 4 -padding 20 -lines 4 <<< " Sleep| Logout| Reboot| Shutdown")"
             case "$MENU" in

@@ -1,4 +1,18 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
+
+#                    __      __           
+#   __  ______  ____/ /___ _/ /____  _____
+#  / / / / __ \/ __  / __ `/ __/ _ \/ ___/
+# / /_/ / /_/ / /_/ / /_/ / /_/  __(__  ) 
+# \__,_/ .___/\__,_/\__,_/\__/\___/____/  
+#     /_/
+#
+# Check for package updates
+#
+# Written by Nathanael Putro
+# Adapted from:
+#   Aditya Shakya's updates script (https://github.com/adi1090x/polybar-themes/blob/master/polybar-5/scripts/updates.sh)
+#   polybar-scripts' updates-pacman-aurhelper script (https://github.com/polybar/polybar-scripts/blob/master/polybar-scripts/updates-pacman-aurhelper/updates-pacman-aurhelper.sh)
 
 BAR_ICON=""
 NOTIFY_ICON=/usr/share/icons/Papirus/32x32/apps/system-software-update.svg
