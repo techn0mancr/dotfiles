@@ -10,6 +10,7 @@
 
 alias lzd="lazydocker"
 alias macho="macho-gui"
+alias q="exit"
 alias rm="rmtrash"
 alias rmdir="rmdirtrash"
 alias workdir="cd $HOME/workspace/unimelb"
