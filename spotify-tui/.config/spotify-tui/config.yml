@@ -26,7 +26,7 @@ theme:
 
 behavior:
   seek_milliseconds: 5000
-  volume_increment: 10
+  volume_increment: 5
   # The lower the number the higher the "frames per second". You can decrease this number so that the audio visualisation is smoother but this can be expensive!
   tick_rate_milliseconds: 250
   # controls whether to show a loading indicator in the top right of the UI whenever communicating with Spotify API
@@ -36,7 +36,7 @@ keybindings:
   # Key stroke can be used if it only uses two keys:
   # ctrl-q works,
   # ctrl-alt-q doesn't.
-  back: "ctrl-q"
+  back: "q"
 
   jump_to_album: "a"
 
