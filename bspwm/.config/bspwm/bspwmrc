@@ -51,6 +51,6 @@ bspc rule --add Chromium desktop='^5' follow=on
 bspc rule --add discord desktop='^3' follow=on
 bspc rule --add firefox desktop='^5' follow=on
 bspc rule --add Mailspring desktop='^4' follow=on
-bspc rule --add Station desktop='^3' follow=on
+bspc rule --add Ferdi desktop='^3' follow=on
 bspc rule --add Zathura state=tiled
-bspc rule --add zoom desktop='^3' follow=on
+bspc rule --add zoom desktop='^3' follow=on state=tiled
