@@ -18,3 +18,6 @@ export READER="zathura"
 export TERMINAL="termite"
 export VISUAL="nvim"
 export WM="bspwm"
+
+# Needed to make IntelliJ IDEA work
+export _JAVA_AWT_WM_NONREPARENTING=1
