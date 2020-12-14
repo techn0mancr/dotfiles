@@ -44,6 +44,10 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     lux -s 5%
 
+# print screen into clipboard
+Print
+    scrshot
+
 #
 # bspwm hotkeys
 #
