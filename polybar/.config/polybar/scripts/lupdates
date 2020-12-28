@@ -9,4 +9,4 @@
 #
 # Written by Nathanael Putro
 
-termite --exec="yay"
+termite --exec="yay -Syu"
