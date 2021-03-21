@@ -8,6 +8,7 @@
 #
 # Written by Nathanael Putro
 
+alias clipboard="xclip -selection clipboard"
 alias lzd="lazydocker"
 alias macho="macho-gui"
 alias q="exit"
