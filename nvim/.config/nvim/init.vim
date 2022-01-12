@@ -8,9 +8,13 @@
 "
 " Written by Nathanael Hananto Putro
 
+" Manjaro-specific setup
+set title
+
 " Initial setup to avoid interfering with plugins
 syntax on
 set encoding=UTF-8
+set nocompatible
 set noshowmode
 
 """" START Vim-plug configuration
@@ -30,12 +34,13 @@ Plug 'scrooloose/syntastic'
 Plug 'townk/vim-autoclose'
 
 " Theme/interface
-Plug 'tomasr/molokai'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
+Plug 'aca/vim-monokai-pro'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 """" END Vim-plug configuration
@@ -69,12 +74,11 @@ filetype plugin on
 " Theme and styling
 """""""""""""""""""
 " Enable true colors (breaks color if not supported)
-set termguicolors
-set background=dark
+" set termguicolors
+" set background=dark
 
-" Enable Molokai's 256-bit color mode
-colorscheme molokai
-let g:rehash256 = 1 
+" Enable Monokai Pro
+colorscheme monokai_pro
 
 """" Vim-Airline configuration
 " Themes and fonts
