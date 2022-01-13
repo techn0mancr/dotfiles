@@ -9,7 +9,3 @@
 #
 # Written by Nathanael Putro
 
-# Start bspwm on login
-if [[ "$(tty)" = "/dev/tty1" ]]; then
-   pgrep bspwm || startx
-fi
